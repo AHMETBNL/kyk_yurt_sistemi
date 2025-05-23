@@ -81,7 +81,7 @@
             // 
             // btn_giris
             // 
-            btn_giris.Location = new Point(308, 352);
+            btn_giris.Location = new Point(329, 354);
             btn_giris.Name = "btn_giris";
             btn_giris.Size = new Size(149, 58);
             btn_giris.TabIndex = 6;
