@@ -57,6 +57,11 @@ namespace kyk_yurt_sistemi
                 string query = "SELECT id FROM yoneticiler WHERE tc=@tc AND sifre=@sifre";
                 giris(txt_sifre,txt_tc,query,radioButton1,radioButton2);
             }
+            else if(radioButton2.Checked==true)
+            {
+                string query = "SELECT id FROM ogrenciler WHERE tc=@tc AND sifre=@sifre";
+                giris(txt_sifre, txt_tc, query, radioButton1, radioButton2);
+            }
         }
     }
 }
