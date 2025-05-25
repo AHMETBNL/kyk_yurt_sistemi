@@ -45,28 +45,28 @@ namespace kyk_yurt_sistemi
             int toplamIzinHakki = 30; // sabit varsayalım
             int kullanilanGun = 0;
 
-            string connStr = "Server=localhost;Database=ogrenci_db;Uid=root;Pwd=sifre;";
-            using (MySqlConnection conn = new MySqlConnection(connStr))
-            {
-                conn.Open();
+           
+                Form1.conn.Open();
 
                 string query = "SELECT SUM(DATEDIFF(bitis_tarihi, baslangic_tarihi) + 1) AS kullanilan_gun FROM izinler WHERE ogrenci_id = @ogrenci_id";
 
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlCommand cmd = new MySqlCommand(query, Form1.conn))
                 {
                     cmd.Parameters.AddWithValue("@ogrenci_id", Form1.ogrenci_id);
                     object result = cmd.ExecuteScalar();
 
                     if (result != DBNull.Value)
                         kullanilanGun = Convert.ToInt32(result);
+                
                 }
-            }
+            
 
             int kalanGun = toplamIzinHakki - kullanilanGun;
             if (kalanGun < 0) kalanGun = 0;
 
             // Etikete yaz
             lbl_izin.Text = $"kalan izin hakkınız\n{kalanGun} gün";
+            Form1.conn.Close();
         }
 
         private void ogrenci_menu_Load(object sender, EventArgs e)
@@ -83,6 +83,7 @@ namespace kyk_yurt_sistemi
             cmd.Parameters.AddWithValue("@oda",cmb_oda.SelectedItem?.ToString());
             cmd.ExecuteNonQuery();
             MessageBox.Show("başarı ile başvuru yapıldı");
+            Form1.conn.Close();
 
         }
 

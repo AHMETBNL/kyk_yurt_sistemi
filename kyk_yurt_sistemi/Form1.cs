@@ -31,6 +31,7 @@ namespace kyk_yurt_sistemi
                 if(rd_yonetici.Checked==true)
                 {
                     yonetici_ana_menu yonetici_Ana_Menu = new yonetici_ana_menu();
+                    conn.Close();
                     yonetici_Ana_Menu.Show();
                     yonetici_id = kullaniciID;
                 }
@@ -38,9 +39,11 @@ namespace kyk_yurt_sistemi
                 {
                     ogrenci_id= kullaniciID;
                     ogrenci_menu ogrenci_=new ogrenci_menu();
+                    conn.Close();
                     ogrenci_.Show();
-                }                
-                
+                }  
+                conn.Close();
+
             }
             else
             {
@@ -48,7 +51,7 @@ namespace kyk_yurt_sistemi
             }
 
             reader.Close();
-            conn.Close();
+            
         }
         private void btn_giris_Click(object sender, EventArgs e)
         {

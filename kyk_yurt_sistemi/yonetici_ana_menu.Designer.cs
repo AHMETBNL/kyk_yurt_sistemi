@@ -37,35 +37,35 @@
             btn_yemek = new Button();
             label1 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox4 = new TextBox();
-            textBox2 = new TextBox();
+            txt_çorba = new TextBox();
+            txt_tatlı = new TextBox();
+            txt_ana_yemek = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txt_ara_sıcak = new TextBox();
             tabPage2 = new TabPage();
             btn_ogrenci_kaydet = new Button();
             label10 = new Label();
-            textBox9 = new TextBox();
+            txt_oda_no = new TextBox();
             label9 = new Label();
-            textBox8 = new TextBox();
+            txt_soyisim = new TextBox();
             label8 = new Label();
-            textBox7 = new TextBox();
+            txt_şifre = new TextBox();
             label7 = new Label();
-            textBox6 = new TextBox();
+            txt_tc = new TextBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            txt_isim = new TextBox();
             tabPage3 = new TabPage();
-            comboBox1 = new ComboBox();
+            comboBox_rutbe = new ComboBox();
             btn_yonetici_kayıt = new Button();
             label15 = new Label();
             label11 = new Label();
-            textBox14 = new TextBox();
-            textBox13 = new TextBox();
+            txt_yönetici_isim = new TextBox();
+            txt_yönetici_tc = new TextBox();
             label12 = new Label();
             label14 = new Label();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
+            txt_yönetici_soyisim = new TextBox();
+            txt_yönetici_sifre = new TextBox();
             label13 = new Label();
             tabPage4 = new TabPage();
             btn_red_oda = new Button();
@@ -75,6 +75,9 @@
             btn_reddet_izin = new Button();
             checkedListBox2 = new CheckedListBox();
             btn_onayla_izin = new Button();
+            tabPage6 = new TabPage();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -82,6 +85,8 @@
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
+            tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -91,10 +96,11 @@
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Controls.Add(tabPage5);
+            tabControl1.Controls.Add(tabPage6);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(652, 426);
+            tabControl1.Size = new Size(739, 426);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -103,9 +109,9 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(644, 393);
+            tabPage1.Size = new Size(731, 393);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "yemek listesi ekleme";
+            tabPage1.Text = " yemek listesi ekleme";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -116,15 +122,15 @@
             panel1.Controls.Add(btn_yemek);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txt_çorba);
+            panel1.Controls.Add(txt_tatlı);
+            panel1.Controls.Add(txt_ana_yemek);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(txt_ara_sıcak);
             panel1.Location = new Point(6, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(632, 370);
+            panel1.Size = new Size(599, 381);
             panel1.TabIndex = 8;
             // 
             // label5
@@ -141,7 +147,7 @@
             // 
             lbl_yetki_yemek.AutoSize = true;
             lbl_yetki_yemek.ForeColor = Color.Red;
-            lbl_yetki_yemek.Location = new Point(358, 155);
+            lbl_yetki_yemek.Location = new Point(306, 140);
             lbl_yetki_yemek.Name = "lbl_yetki_yemek";
             lbl_yetki_yemek.Size = new Size(224, 20);
             lbl_yetki_yemek.TabIndex = 9;
@@ -164,6 +170,7 @@
             btn_yemek.Text = "yemekleri ekle";
             btn_yemek.UseVisualStyleBackColor = true;
             btn_yemek.Visible = false;
+            btn_yemek.Click += btn_yemek_Click;
             // 
             // label1
             // 
@@ -185,29 +192,29 @@
             label4.Text = "tatlı";
             label4.Visible = false;
             // 
-            // textBox1
+            // txt_çorba
             // 
-            textBox1.Location = new Point(49, 55);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(160, 27);
-            textBox1.TabIndex = 0;
-            textBox1.Visible = false;
+            txt_çorba.Location = new Point(49, 55);
+            txt_çorba.Name = "txt_çorba";
+            txt_çorba.Size = new Size(160, 27);
+            txt_çorba.TabIndex = 0;
+            txt_çorba.Visible = false;
             // 
-            // textBox4
+            // txt_tatlı
             // 
-            textBox4.Location = new Point(49, 280);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(160, 27);
-            textBox4.TabIndex = 6;
-            textBox4.Visible = false;
+            txt_tatlı.Location = new Point(49, 280);
+            txt_tatlı.Name = "txt_tatlı";
+            txt_tatlı.Size = new Size(160, 27);
+            txt_tatlı.TabIndex = 6;
+            txt_tatlı.Visible = false;
             // 
-            // textBox2
+            // txt_ana_yemek
             // 
-            textBox2.Location = new Point(49, 133);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(160, 27);
-            textBox2.TabIndex = 2;
-            textBox2.Visible = false;
+            txt_ana_yemek.Location = new Point(49, 133);
+            txt_ana_yemek.Name = "txt_ana_yemek";
+            txt_ana_yemek.Size = new Size(160, 27);
+            txt_ana_yemek.TabIndex = 2;
+            txt_ana_yemek.Visible = false;
             // 
             // label3
             // 
@@ -229,33 +236,33 @@
             label2.Text = "ana yemek";
             label2.Visible = false;
             // 
-            // textBox3
+            // txt_ara_sıcak
             // 
-            textBox3.Location = new Point(49, 208);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(160, 27);
-            textBox3.TabIndex = 4;
-            textBox3.Visible = false;
+            txt_ara_sıcak.Location = new Point(49, 208);
+            txt_ara_sıcak.Name = "txt_ara_sıcak";
+            txt_ara_sıcak.Size = new Size(160, 27);
+            txt_ara_sıcak.TabIndex = 4;
+            txt_ara_sıcak.Visible = false;
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(btn_ogrenci_kaydet);
             tabPage2.Controls.Add(label10);
-            tabPage2.Controls.Add(textBox9);
+            tabPage2.Controls.Add(txt_oda_no);
             tabPage2.Controls.Add(label9);
-            tabPage2.Controls.Add(textBox8);
+            tabPage2.Controls.Add(txt_soyisim);
             tabPage2.Controls.Add(label8);
-            tabPage2.Controls.Add(textBox7);
+            tabPage2.Controls.Add(txt_şifre);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(textBox6);
+            tabPage2.Controls.Add(txt_tc);
             tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(textBox5);
+            tabPage2.Controls.Add(txt_isim);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(644, 393);
+            tabPage2.Size = new Size(731, 393);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "öğrenci ekleme";
+            tabPage2.Text = " öğrenci ekleme";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // btn_ogrenci_kaydet
@@ -266,6 +273,7 @@
             btn_ogrenci_kaydet.TabIndex = 10;
             btn_ogrenci_kaydet.Text = "kaydet";
             btn_ogrenci_kaydet.UseVisualStyleBackColor = true;
+            btn_ogrenci_kaydet.Click += btn_ogrenci_kaydet_Click;
             // 
             // label10
             // 
@@ -276,12 +284,12 @@
             label10.TabIndex = 9;
             label10.Text = "öğrencinin oda numarası";
             // 
-            // textBox9
+            // txt_oda_no
             // 
-            textBox9.Location = new Point(320, 166);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(166, 27);
-            textBox9.TabIndex = 8;
+            txt_oda_no.Location = new Point(320, 166);
+            txt_oda_no.Name = "txt_oda_no";
+            txt_oda_no.Size = new Size(166, 27);
+            txt_oda_no.TabIndex = 8;
             // 
             // label9
             // 
@@ -292,12 +300,12 @@
             label9.TabIndex = 7;
             label9.Text = "öğrencinin soy_ismi";
             // 
-            // textBox8
+            // txt_soyisim
             // 
-            textBox8.Location = new Point(320, 74);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(166, 27);
-            textBox8.TabIndex = 6;
+            txt_soyisim.Location = new Point(320, 74);
+            txt_soyisim.Name = "txt_soyisim";
+            txt_soyisim.Size = new Size(166, 27);
+            txt_soyisim.TabIndex = 6;
             // 
             // label8
             // 
@@ -308,12 +316,12 @@
             label8.TabIndex = 5;
             label8.Text = "öğrencinin şifresi";
             // 
-            // textBox7
+            // txt_şifre
             // 
-            textBox7.Location = new Point(106, 252);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(166, 27);
-            textBox7.TabIndex = 4;
+            txt_şifre.Location = new Point(106, 252);
+            txt_şifre.Name = "txt_şifre";
+            txt_şifre.Size = new Size(166, 27);
+            txt_şifre.TabIndex = 4;
             // 
             // label7
             // 
@@ -324,12 +332,12 @@
             label7.TabIndex = 3;
             label7.Text = "öğrencinin T.C";
             // 
-            // textBox6
+            // txt_tc
             // 
-            textBox6.Location = new Point(106, 166);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(166, 27);
-            textBox6.TabIndex = 2;
+            txt_tc.Location = new Point(106, 166);
+            txt_tc.Name = "txt_tc";
+            txt_tc.Size = new Size(166, 27);
+            txt_tc.TabIndex = 2;
             // 
             // label6
             // 
@@ -340,41 +348,41 @@
             label6.TabIndex = 1;
             label6.Text = "öğrencinin ismi";
             // 
-            // textBox5
+            // txt_isim
             // 
-            textBox5.Location = new Point(106, 74);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(166, 27);
-            textBox5.TabIndex = 0;
+            txt_isim.Location = new Point(106, 74);
+            txt_isim.Name = "txt_isim";
+            txt_isim.Size = new Size(166, 27);
+            txt_isim.TabIndex = 0;
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(comboBox1);
+            tabPage3.Controls.Add(comboBox_rutbe);
             tabPage3.Controls.Add(btn_yonetici_kayıt);
             tabPage3.Controls.Add(label15);
             tabPage3.Controls.Add(label11);
-            tabPage3.Controls.Add(textBox14);
-            tabPage3.Controls.Add(textBox13);
+            tabPage3.Controls.Add(txt_yönetici_isim);
+            tabPage3.Controls.Add(txt_yönetici_tc);
             tabPage3.Controls.Add(label12);
             tabPage3.Controls.Add(label14);
-            tabPage3.Controls.Add(textBox11);
-            tabPage3.Controls.Add(textBox12);
+            tabPage3.Controls.Add(txt_yönetici_soyisim);
+            tabPage3.Controls.Add(txt_yönetici_sifre);
             tabPage3.Controls.Add(label13);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(644, 393);
+            tabPage3.Size = new Size(731, 393);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "yönetici ekleme";
+            tabPage3.Text = " yönetici ekleme";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBox_rutbe
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1-aşçı\t", "2-idari personel\t", "3-yurt müdürü" });
-            comboBox1.Location = new Point(327, 191);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(166, 28);
-            comboBox1.TabIndex = 22;
+            comboBox_rutbe.FormattingEnabled = true;
+            comboBox_rutbe.Items.AddRange(new object[] { "1-aşçı\t", "2-idari personel\t", "3-yurt müdürü" });
+            comboBox_rutbe.Location = new Point(327, 191);
+            comboBox_rutbe.Name = "comboBox_rutbe";
+            comboBox_rutbe.Size = new Size(166, 28);
+            comboBox_rutbe.TabIndex = 22;
             // 
             // btn_yonetici_kayıt
             // 
@@ -384,6 +392,7 @@
             btn_yonetici_kayıt.TabIndex = 21;
             btn_yonetici_kayıt.Text = "kaydet";
             btn_yonetici_kayıt.UseVisualStyleBackColor = true;
+            btn_yonetici_kayıt.Click += btn_yonetici_kayıt_Click;
             // 
             // label15
             // 
@@ -403,19 +412,19 @@
             label11.TabIndex = 20;
             label11.Text = "yöneticinin rütbesi";
             // 
-            // textBox14
+            // txt_yönetici_isim
             // 
-            textBox14.Location = new Point(113, 99);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(166, 27);
-            textBox14.TabIndex = 11;
+            txt_yönetici_isim.Location = new Point(113, 99);
+            txt_yönetici_isim.Name = "txt_yönetici_isim";
+            txt_yönetici_isim.Size = new Size(166, 27);
+            txt_yönetici_isim.TabIndex = 11;
             // 
-            // textBox13
+            // txt_yönetici_tc
             // 
-            textBox13.Location = new Point(113, 191);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(166, 27);
-            textBox13.TabIndex = 13;
+            txt_yönetici_tc.Location = new Point(113, 191);
+            txt_yönetici_tc.Name = "txt_yönetici_tc";
+            txt_yönetici_tc.Size = new Size(166, 27);
+            txt_yönetici_tc.TabIndex = 13;
             // 
             // label12
             // 
@@ -435,19 +444,19 @@
             label14.TabIndex = 14;
             label14.Text = "yöneticinin T.C";
             // 
-            // textBox11
+            // txt_yönetici_soyisim
             // 
-            textBox11.Location = new Point(327, 99);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(166, 27);
-            textBox11.TabIndex = 17;
+            txt_yönetici_soyisim.Location = new Point(327, 99);
+            txt_yönetici_soyisim.Name = "txt_yönetici_soyisim";
+            txt_yönetici_soyisim.Size = new Size(166, 27);
+            txt_yönetici_soyisim.TabIndex = 17;
             // 
-            // textBox12
+            // txt_yönetici_sifre
             // 
-            textBox12.Location = new Point(113, 277);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(166, 27);
-            textBox12.TabIndex = 15;
+            txt_yönetici_sifre.Location = new Point(113, 277);
+            txt_yönetici_sifre.Name = "txt_yönetici_sifre";
+            txt_yönetici_sifre.Size = new Size(166, 27);
+            txt_yönetici_sifre.TabIndex = 15;
             // 
             // label13
             // 
@@ -465,9 +474,9 @@
             tabPage4.Controls.Add(checkedListBox1);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(644, 393);
+            tabPage4.Size = new Size(731, 393);
             tabPage4.TabIndex = 3;
-            tabPage4.Text = "oda değişikliği onayla";
+            tabPage4.Text = " oda değişikliği onayla";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // btn_red_oda
@@ -505,9 +514,9 @@
             tabPage5.Controls.Add(btn_onayla_izin);
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(644, 393);
+            tabPage5.Size = new Size(731, 393);
             tabPage5.TabIndex = 4;
-            tabPage5.Text = "izin onayla";
+            tabPage5.Text = " izin onayla ";
             tabPage5.UseVisualStyleBackColor = true;
             // 
             // btn_reddet_izin
@@ -536,11 +545,43 @@
             btn_onayla_izin.Text = "seçilenleri onayla";
             btn_onayla_izin.UseVisualStyleBackColor = true;
             // 
+            // tabPage6
+            // 
+            tabPage6.Controls.Add(button1);
+            tabPage6.Controls.Add(dataGridView1);
+            tabPage6.Location = new Point(4, 29);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(731, 393);
+            tabPage6.TabIndex = 5;
+            tabPage6.Text = " kayıt silme ";
+            tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(728, 295);
+            dataGridView1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            button1.Location = new Point(315, 318);
+            button1.Name = "button1";
+            button1.Size = new Size(84, 39);
+            button1.TabIndex = 2;
+            button1.Text = "sil";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // yonetici_ana_menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(679, 481);
+            ClientSize = new Size(923, 529);
             Controls.Add(tabControl1);
             Name = "yonetici_ana_menu";
             Text = "yonetici_ana_menu";
@@ -555,6 +596,8 @@
             tabPage3.PerformLayout();
             tabPage4.ResumeLayout(false);
             tabPage5.ResumeLayout(false);
+            tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -570,36 +613,36 @@
         private Button btn_yemek;
         private Label label1;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox4;
-        private TextBox textBox2;
+        private TextBox txt_çorba;
+        private TextBox txt_tatlı;
+        private TextBox txt_ana_yemek;
         private Label label3;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txt_ara_sıcak;
         private Label label5;
         private Label lbl_yetki_yemek;
         private DateTimePicker dateTimePicker1;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox txt_isim;
         private Button btn_ogrenci_kaydet;
         private Label label10;
-        private TextBox textBox9;
+        private TextBox txt_oda_no;
         private Label label9;
-        private TextBox textBox8;
+        private TextBox txt_soyisim;
         private Label label8;
-        private TextBox textBox7;
+        private TextBox txt_şifre;
         private Label label7;
-        private TextBox textBox6;
-        private ComboBox comboBox1;
+        private TextBox txt_tc;
+        private ComboBox comboBox_rutbe;
         private Button btn_yonetici_kayıt;
         private Label label15;
         private Label label11;
-        private TextBox textBox14;
-        private TextBox textBox13;
+        private TextBox txt_yönetici_isim;
+        private TextBox txt_yönetici_tc;
         private Label label12;
         private Label label14;
-        private TextBox textBox11;
-        private TextBox textBox12;
+        private TextBox txt_yönetici_soyisim;
+        private TextBox txt_yönetici_sifre;
         private Label label13;
         private Button btn_red_oda;
         private Button btn_onayla_oda;
@@ -607,5 +650,8 @@
         private Button btn_reddet_izin;
         private CheckedListBox checkedListBox2;
         private Button btn_onayla_izin;
+        private TabPage tabPage6;
+        private DataGridView dataGridView1;
+        private Button button1;
     }
 }
